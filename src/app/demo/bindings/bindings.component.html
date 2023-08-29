@@ -1,0 +1,11 @@
+<p>bindings works!</p>
+
+<div class="chartreuse">
+  <h2>{{title}}</h2>
+
+  <input type="text" [(ngModel)]="title" />
+  <br>
+  <input type="button" (click)="changeTitle()" value="Click me please please please please please please please" />
+  <br>
+  <input type="button" (click)="disableMe()" value="Disable" [disabled]="enabled"/>
+</div>

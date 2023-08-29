@@ -1,0 +1,20 @@
+<p>pipes works!</p>
+<div class="chartreuse">
+    <p>{{upper | uppercase}}</p>
+    <hr>
+
+    <h3>{{lower | lowercase}}</h3>
+    <hr>
+    <h3>{{dateDujour}}</h3>
+    <h3>{{dateDujour | date: 'short'}}</h3>
+    <h3>{{dateDujour | date: 'dd/MM/yyyy hh:mm:ss'}}</h3>
+    <hr>
+    <h3>accountBalance : {{accountBalance}}</h3>
+    <h3>accountBalance : {{accountBalance | number : "1.3-5"}}</h3>
+    <hr>
+    <p>{{ dataDebug | json }}</p>
+    <hr>
+    <span>Prix HTVA : {{ priceHTVA }}</span><br>
+    <span>Prix TVAC 21% : {{ priceHTVA | tva : tauxTVAClient | number : "1.2-2" }}</span>
+
+</div>

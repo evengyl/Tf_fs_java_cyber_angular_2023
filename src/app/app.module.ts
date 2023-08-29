@@ -11,6 +11,9 @@ import {FormsModule} from "@angular/forms";
 import { PipesComponent } from './demo/pipes/pipes.component';
 import { BindingsComponent } from './demo/bindings/bindings.component';
 import { TvaPipe } from './demo/pipes/tva.pipe';
+import { PipeCustomComponent } from './exercice/pipe-custom/pipe-custom.component';
+import { EurotobtcPipe } from './exercice/pipe-custom/eurotobtc.pipe';
+import { JhmsPipe } from './exercice/pipe-custom/jhms.pipe';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { TvaPipe } from './demo/pipes/tva.pipe';
     HomeComponent,
     PipesComponent,
     BindingsComponent,
-    TvaPipe
+    TvaPipe,
+    PipeCustomComponent,
+    EurotobtcPipe,
+    JhmsPipe
   ],
   imports: [
     BrowserModule,

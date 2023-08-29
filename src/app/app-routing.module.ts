@@ -6,6 +6,7 @@ import { ExerciceComponent } from './exercice/exercice.component';
 import { BindingsComponent } from './demo/bindings/bindings.component';
 import { PipesComponent } from './demo/pipes/pipes.component';
 import { ChronoComponent } from './exercice/chrono/chrono.component';
+import { PipeCustomComponent } from './exercice/pipe-custom/pipe-custom.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -14,7 +15,8 @@ const routes: Routes = [
     { path : "pipes", component : PipesComponent}
   ]},
   {path: 'exercices', component : ExerciceComponent, children : [
-    { path : "chrono", component : ChronoComponent}
+    { path : "chrono", component : ChronoComponent},
+    { path : "pipeCustom", component : PipeCustomComponent}
   ]},
 ];
 

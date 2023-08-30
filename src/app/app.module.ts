@@ -15,6 +15,8 @@ import { PipeCustomComponent } from './exercice/pipe-custom/pipe-custom.componen
 import { EurotobtcPipe } from './exercice/pipe-custom/eurotobtc.pipe';
 import { JhmsPipe } from './exercice/pipe-custom/jhms.pipe';
 import { DirectivesComponent } from './demo/directives/directives.component';
+import { CartV1Component } from './exercice/cart-v1/cart-v1.component';
+import { BobonneTranslatePipe } from './exercice/cart-v1/bobonne-translate.pipe';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { DirectivesComponent } from './demo/directives/directives.component';
     PipeCustomComponent,
     EurotobtcPipe,
     JhmsPipe,
-    DirectivesComponent
+    DirectivesComponent,
+    CartV1Component,
+    BobonneTranslatePipe
   ],
   imports: [
     BrowserModule,

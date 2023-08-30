@@ -14,6 +14,7 @@ import { TvaPipe } from './demo/pipes/tva.pipe';
 import { PipeCustomComponent } from './exercice/pipe-custom/pipe-custom.component';
 import { EurotobtcPipe } from './exercice/pipe-custom/eurotobtc.pipe';
 import { JhmsPipe } from './exercice/pipe-custom/jhms.pipe';
+import { DirectivesComponent } from './demo/directives/directives.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { JhmsPipe } from './exercice/pipe-custom/jhms.pipe';
     TvaPipe,
     PipeCustomComponent,
     EurotobtcPipe,
-    JhmsPipe
+    JhmsPipe,
+    DirectivesComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,38 @@
+<p>directives works!</p>
+
+<h3>Directives Structurelles</h3>
+<h4>Le NgIf -> (*ngIf="")</h4>
+
+
+<button *ngIf="!textIsShow" (click)="show()">Show Text</button>
+<button *ngIf="textIsShow" (click)="hide()">Hide Text</button>
+
+<p *ngIf="textIsShow">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque veritatis unde fuga omnis beatae vero ducimus natus at debitis, officia assumenda quam magni cumque alias ea ad porro tenetur reiciendis voluptate laborum quis deleniti magnam quia rem. Veniam id laboriosam aspernatur reiciendis, similique vel excepturi magni quisquam quidem molestias iste earum cupiditate officia cum consequuntur, voluptas illum quis explicabo deserunt omnis quas suscipit? Provident, doloremque quod nesciunt odit pariatur unde sit fugiat facilis in officia voluptatibus dignissimos voluptate aspernatur obcaecati? Autem, sapiente culpa. Ipsam libero voluptas deserunt architecto obcaecati ea quos repellat quibusdam magnam nulla nam praesentium perspiciatis quam aliquid laboriosam saepe animi nobis sequi itaque voluptatibus, cumque fuga quia, voluptate eum? Iste rem recusandae sed magni voluptatem in, voluptatibus cupiditate suscipit similique voluptate id atque quibusdam consequuntur hic temporibus enim blanditiis odio! Illo delectus itaque natus aliquid accusamus aut quo, sint libero quia aspernatur ad, vitae perferendis culpa laudantium commodi est provident non incidunt nesciunt harum similique fuga? Est animi aliquam pariatur commodi</p>
+
+<hr><hr>
+
+<button (click)="connect()">Connect</button>
+<div *ngIf="isLoggedIn; else loggedOut">
+    Welcome back, friend.
+</div>
+  
+<ng-template #loggedOut>
+    <div>Please friend, login.</div>
+</ng-template>
+<hr>
+
+<h4>Le NgFor -> (*ngFor="")</h4>
+
+<ul>
+    <li *ngFor="let horseCouillon of listHorseMan">
+        {{ horseCouillon.name }} sur son cheval {{ horseCouillon.colorHorse }}
+    </li>
+
+    <!--
+        <ul>
+            listHorseMan.forEach((horseCouillon) => {
+                `<li>${horseCouillon.name} sur son cehval ${horseCouillon.colorHorse}</li>` 
+            })
+        </ul>
+    -->
+</ul>

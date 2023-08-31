@@ -1,0 +1,9 @@
+<div class="alert-success">
+    <b>RANK : {{ ranked }}</b><br>
+    Player's Name : {{ name }}<br>
+    Avatar : {{ avatar }}<br>
+    <b>Games Win : {{ win }}</b><br>
+    Games Loose : {{ loose }}<br>
+    Players Money bank : {{ money }}<br>
+    <button *ngIf="isAdmin" (click)="ban(name)">BAN</button>
+</div>

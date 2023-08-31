@@ -1,0 +1,20 @@
+<p>top-players works!</p>
+
+<button (click)="asc()">ASC</button>
+<button (click)="desc()">DESC</button>
+<button (click)="setAdmin()">Mode Admin ({{isAdmin}})</button>
+
+
+<ng-container *ngFor="let player of listTopPlayers">
+    <app-player 
+        [name]="player.name"
+        [ranked]="player.ranked"
+        [win]="player.win"
+        [loose]="player.loose"
+        [avatar]="player.avatar"
+        [money]="player.money"
+        [isAdmin]="isAdmin"
+
+        (banPlayer)="ban($event)"
+    ></app-player>
+</ng-container>

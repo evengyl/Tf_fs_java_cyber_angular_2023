@@ -22,6 +22,10 @@ import { DirectivesCustomComponent } from './demo/directives-custom/directives-c
 import { ZoomitDirective } from './demo/directives-custom/zoomit.directive';
 import { ZoomitEventDirective } from './demo/directives-custom/zoomit-event.directive';
 import { ZoomitEventParamDirective } from './demo/directives-custom/zoomit-event-param.directive';
+import { ExosCustomDirectiveComponent } from './exercice/exos-custom-directive/exos-custom-directive.component';
+import { TrimerDirective } from './exercice/exos-custom-directive/trimer.directive';
+import { TopPlayersComponent } from './demo/inputOutput/top-players/top-players.component';
+import { PlayerComponent } from './demo/inputOutput/player/player.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +47,11 @@ import { ZoomitEventParamDirective } from './demo/directives-custom/zoomit-event
     DirectivesCustomComponent,
     ZoomitDirective,
     ZoomitEventDirective,
-    ZoomitEventParamDirective
+    ZoomitEventParamDirective,
+    ExosCustomDirectiveComponent,
+    TrimerDirective,
+    TopPlayersComponent,
+    PlayerComponent,
   ],
   imports: [
     BrowserModule,

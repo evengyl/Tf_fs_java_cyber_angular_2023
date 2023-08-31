@@ -24,6 +24,7 @@
 <h4>Le NgFor -> (*ngFor="")</h4>
 
 <ul>
+    <h4>Simple</h4>
     <li *ngFor="let horseCouillon of listHorseMan">
         {{ horseCouillon.name }} sur son cheval {{ horseCouillon.colorHorse }}
     </li>
@@ -35,4 +36,32 @@
             })
         </ul>
     -->
+
+    <hr>
+    <h4>Avec index</h4>
+    <li *ngFor="let horseCouillon of listHorseMan; let i = index">
+        {{i}} : {{ horseCouillon.name }} sur son cheval {{ horseCouillon.colorHorse }}
+    </li>
+
+
+    <hr>
+    <h4>Avec pipe keyvalue</h4>
+    <li *ngFor="let horseCouillon of listHorseMan | keyvalue">
+        {{ horseCouillon.key }} : {{ horseCouillon.value.name }} sur son cheval {{horseCouillon.value.colorHorse}}
+    </li>
+
+
+    <p>
+        ATTENTION !!!!!! on ne peux pas mettre dans un balise, un *ngIf et un *ngFor en même temps<br>
+        Vous pouvez, au besoin, <ng-container></ng-container>, elle n'apparait juste pas même avec condition
+    </p>
+
+
+    <hr>
+    <h4>NgIf et NgFor ensemble avec ngContainer!</h4>
+    <ng-container *ngFor="let client of listClient">
+        <li *ngIf="client.inOrdered">
+            {{ client.name }} -> {{ client.inOrdered }} 
+        </li>
+    </ng-container>
 </ul>

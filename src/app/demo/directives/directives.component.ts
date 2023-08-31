@@ -16,6 +16,15 @@ export class DirectivesComponent {
     { name : "Pestillance", colorHorse : "Green" },
   ]
 
+
+  listClient : any[] = [
+    { name : "Julie", inOrdered : true },
+    { name : "Georges", inOrdered : false },
+    { name : "Didier", inOrdered : false },
+    { name : "Hervé", inOrdered : true },
+    { name : "Brian", inOrdered : true }
+  ]
+
   
   show(){
     this.textIsShow = true

@@ -1,0 +1,30 @@
+<p>directives-custom works!</p>
+<h1>Les directives de composant custom</h1>
+
+<h2>Custom Simple</h2>
+<li *ngFor="let horseCouillon of listHorseMan" zoomit>
+    {{ horseCouillon.name }} sur son cheval {{ horseCouillon.colorHorse }}
+</li>
+<hr>
+
+
+<h2>Custom Event</h2>
+<li *ngFor="let client of listClient" zoomitEvent>
+    {{ client.name }} -> {{ client.inOrdered }} 
+    <button *ngIf="!client.inOrdered" (click)="regularClient(client.name)">Regular</button>
+    <button *ngIf="client.inOrdered" (click)="discardClient(client.name)">Discard</button>
+</li>
+
+
+
+<hr>
+<h2>Custom Parameter</h2>
+<label>Mamy, choisi ta couleur pour le zoom</label><input type="text" [(ngModel)]="colorForMamy">
+<label>Mamy, choisi ta taille</label><input type="number" [(ngModel)]="fontSizeMamy">
+
+<li *ngFor="let client of listClient" [zoomitEventParam]="[colorForMamy, fontSizeMamy]">
+    <!-- <li *ngFor="let client of listClient" [zoomitEventParam]="colorForMamy"> -->
+    {{ client.name }} -> {{ client.inOrdered }} 
+    <button *ngIf="!client.inOrdered" (click)="regularClient(client.name)">Regular</button>
+    <button *ngIf="client.inOrdered" (click)="discardClient(client.name)">Discard</button>
+</li>

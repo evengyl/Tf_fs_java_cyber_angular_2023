@@ -9,13 +9,17 @@ import { ChronoComponent } from './exercice/chrono/chrono.component';
 import { PipeCustomComponent } from './exercice/pipe-custom/pipe-custom.component';
 import { DirectivesComponent } from './demo/directives/directives.component';
 import { CartV1Component } from './exercice/cart-v1/cart-v1.component';
+import { DirectivesPart2Component } from './demo/directives-part2/directives-part2.component';
+import { DirectivesCustomComponent } from './demo/directives-custom/directives-custom.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'demos', component : DemoComponent, children : [
     { path : 'bindings', component : BindingsComponent },
     { path : "pipes", component : PipesComponent},
-    { path : "directives", component : DirectivesComponent}
+    { path : "directives", component : DirectivesComponent},
+    { path : "directivesPart2", component : DirectivesPart2Component},
+    { path : "directivesCustom", component : DirectivesCustomComponent},
   ]},
   {path: 'exercices', component : ExerciceComponent, children : [
     { path : "chrono", component : ChronoComponent },

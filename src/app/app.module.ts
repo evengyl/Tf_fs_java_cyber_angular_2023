@@ -17,6 +17,11 @@ import { JhmsPipe } from './exercice/pipe-custom/jhms.pipe';
 import { DirectivesComponent } from './demo/directives/directives.component';
 import { CartV1Component } from './exercice/cart-v1/cart-v1.component';
 import { BobonneTranslatePipe } from './exercice/cart-v1/bobonne-translate.pipe';
+import { DirectivesPart2Component } from './demo/directives-part2/directives-part2.component';
+import { DirectivesCustomComponent } from './demo/directives-custom/directives-custom.component';
+import { ZoomitDirective } from './demo/directives-custom/zoomit.directive';
+import { ZoomitEventDirective } from './demo/directives-custom/zoomit-event.directive';
+import { ZoomitEventParamDirective } from './demo/directives-custom/zoomit-event-param.directive';
 
 @NgModule({
   declarations: [
@@ -33,7 +38,12 @@ import { BobonneTranslatePipe } from './exercice/cart-v1/bobonne-translate.pipe'
     JhmsPipe,
     DirectivesComponent,
     CartV1Component,
-    BobonneTranslatePipe
+    BobonneTranslatePipe,
+    DirectivesPart2Component,
+    DirectivesCustomComponent,
+    ZoomitDirective,
+    ZoomitEventDirective,
+    ZoomitEventParamDirective
   ],
   imports: [
     BrowserModule,

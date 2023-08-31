@@ -1,0 +1,18 @@
+<p>directives-part2 works!</p>
+<h1>Les directives de composant, [(ngModel)]... (vu), [ngClass], [ngStyle]</h1>
+
+<h2>NgStyle prends en param, un object assoc clé (props css) value (value css)</h2>
+
+<li *ngFor="let horseCouillon of listHorseMan" [ngStyle]="{'color' : setColorHorse(horseCouillon.colorHorse)}">
+    {{ horseCouillon.name }} sur son cheval {{ horseCouillon.colorHorse }}
+</li>
+
+
+
+<hr>
+<h2>NgClass conditionne une class css à être présente ou non par exemple</h2>
+<li *ngFor="let client of listClient" [ngClass]="getClassClient(client.inOrdered)">
+    {{ client.name }} -> {{ client.inOrdered }} 
+    <button *ngIf="!client.inOrdered" (click)="regularClient(client.name)">Regular</button>
+    <button *ngIf="client.inOrdered" (click)="discardClient(client.name)">Discard</button>
+</li>

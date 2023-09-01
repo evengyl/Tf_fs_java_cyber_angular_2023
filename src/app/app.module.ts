@@ -31,6 +31,7 @@ import { ListArticlesComponent } from './exercice/cart-v2/list-articles/list-art
 import { SystemAddArticleComponent } from './exercice/cart-v2/system-add-article/system-add-article.component';
 import { ArticleComponent } from './exercice/cart-v2/list-articles/article/article.component';
 import { ServicesComponent } from './demo/services/services.component';
+import { CartV3Component } from './exercice/cart-v3/cart-v3.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { ServicesComponent } from './demo/services/services.component';
     ListArticlesComponent,
     SystemAddArticleComponent,
     ArticleComponent,
-    ServicesComponent
+    ServicesComponent,
+    CartV3Component
   ],
   imports: [
     BrowserModule,

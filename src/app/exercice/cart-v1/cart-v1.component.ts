@@ -49,4 +49,13 @@ export class CartV1Component {
     }
   }
 
+
+  delArticle(name : string){
+    this.listArticles = this.listArticles.filter((art) => {
+      if(art.name == name) return false
+
+      return true
+    })
+  }
+
 }

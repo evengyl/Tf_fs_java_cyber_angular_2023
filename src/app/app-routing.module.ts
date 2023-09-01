@@ -15,6 +15,7 @@ import { ExosCustomDirectiveComponent } from './exercice/exos-custom-directive/e
 import { TopPlayersComponent } from './demo/inputOutput/top-players/top-players.component';
 import { ListArticlesComponent } from './exercice/cart-v2/list-articles/list-articles.component';
 import { ServicesComponent } from './demo/services/services.component';
+import { CartV3Component } from './exercice/cart-v3/cart-v3.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -33,6 +34,7 @@ const routes: Routes = [
     { path : "cartv1", component : CartV1Component },
     { path : "customDirective", component : ExosCustomDirectiveComponent },
     { path : "cartv2", component : ListArticlesComponent },
+    { path : "cartv3", component : CartV3Component },
 
   ]},
 ];

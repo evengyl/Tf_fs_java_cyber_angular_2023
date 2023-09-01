@@ -1,0 +1,19 @@
+<p>services works!</p>
+
+
+
+<h1>Page de connexion (fake)</h1>
+<button class="alert-success" *ngIf="!isConnect" (click)="login()">Connection</button>
+<button class="alert-danger" *ngIf="isConnect" (click)="logout()">Deconnection</button>
+
+<br><br>
+<hr>
+<br><br>
+
+<button (click)="clearLocalStorage()" class="alert-danger">Clear all LocalStorage</button>
+
+<br><br>
+<hr>
+<br><br>
+
+<button (click)="storeArticles()" class="alert-success">Store all articles in localstorage</button>

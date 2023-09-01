@@ -30,6 +30,7 @@ import { BobonneTranslateV2Pipe } from './exercice/cart-v2/list-articles/bobonne
 import { ListArticlesComponent } from './exercice/cart-v2/list-articles/list-articles.component';
 import { SystemAddArticleComponent } from './exercice/cart-v2/system-add-article/system-add-article.component';
 import { ArticleComponent } from './exercice/cart-v2/list-articles/article/article.component';
+import { ServicesComponent } from './demo/services/services.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { ArticleComponent } from './exercice/cart-v2/list-articles/article/artic
     BobonneTranslateV2Pipe,
     ListArticlesComponent,
     SystemAddArticleComponent,
-    ArticleComponent
+    ArticleComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,

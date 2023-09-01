@@ -1,0 +1,20 @@
+<h1>Le panier de courses V2</h1>
+
+
+<app-system-add-article
+    (addArticleEvent)="addArticle($event)"
+>
+</app-system-add-article>
+
+<fieldset style="width:55%; float:left;">
+    <legend>Liste des courses</legend>
+    <ul>
+        <app-article *ngFor="let article of listArticles"
+            [name]="article.name"
+            [qty]="article.qty"
+            [dateAjout]="article.dateAjout"
+            (delArticleEvent)="delArticle($event)"
+        >
+        </app-article>
+    </ul>
+</fieldset>

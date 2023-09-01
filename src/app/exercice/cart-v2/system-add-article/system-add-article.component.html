@@ -1,5 +1,3 @@
-<h1>Le panier de courses V1</h1>
-
 <fieldset style="width:35%; float:left;">
     <legend>Système d'ajout</legend>
 
@@ -17,18 +15,4 @@
     >
         Ajouter
     </button>
-</fieldset>
-
-
-
-<fieldset style="width:55%; float:left;">
-    <legend>Liste des courses</legend>
-    <ul>
-        <li *ngFor="let article of listArticles">
-            {{article.qty}} x {{article.name}} 
-            ajouté le : {{article.dateAjout | date : "dd/MM/yyyy hh:mm:ss" }}
-             - Traduction pour mamy : {{ article.qty | bobonneTranslate}}
-<!--* 4 x pomme ajouté le : jj/mm/aaaa hh:mm:ss - Traduction Pour mamy : Quatre-->
-        </li>
-    </ul>
 </fieldset>

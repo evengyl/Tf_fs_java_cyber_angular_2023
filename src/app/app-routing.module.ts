@@ -13,6 +13,7 @@ import { DirectivesPart2Component } from './demo/directives-part2/directives-par
 import { DirectivesCustomComponent } from './demo/directives-custom/directives-custom.component';
 import { ExosCustomDirectiveComponent } from './exercice/exos-custom-directive/exos-custom-directive.component';
 import { TopPlayersComponent } from './demo/inputOutput/top-players/top-players.component';
+import { ListArticlesComponent } from './exercice/cart-v2/list-articles/list-articles.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -29,6 +30,8 @@ const routes: Routes = [
     { path : "pipeCustom", component : PipeCustomComponent },
     { path : "cartv1", component : CartV1Component },
     { path : "customDirective", component : ExosCustomDirectiveComponent },
+    { path : "cartv2", component : ListArticlesComponent },
+
   ]},
 ];
 

@@ -26,8 +26,10 @@ import { ExosCustomDirectiveComponent } from './exercice/exos-custom-directive/e
 import { TrimerDirective } from './exercice/exos-custom-directive/trimer.directive';
 import { TopPlayersComponent } from './demo/inputOutput/top-players/top-players.component';
 import { PlayerComponent } from './demo/inputOutput/player/player.component';
-import { CartV2Component } from './exercice/cart-v2/cart-v2.component';
-import { BobonneTranslateV2Pipe } from './exercice/cart-v2/bobonne-translate.pipe';
+import { BobonneTranslateV2Pipe } from './exercice/cart-v2/list-articles/bobonne-translate.pipe';
+import { ListArticlesComponent } from './exercice/cart-v2/list-articles/list-articles.component';
+import { SystemAddArticleComponent } from './exercice/cart-v2/system-add-article/system-add-article.component';
+import { ArticleComponent } from './exercice/cart-v2/list-articles/article/article.component';
 
 @NgModule({
   declarations: [
@@ -54,8 +56,10 @@ import { BobonneTranslateV2Pipe } from './exercice/cart-v2/bobonne-translate.pip
     TrimerDirective,
     TopPlayersComponent,
     PlayerComponent,
-    CartV2Component,
-    BobonneTranslateV2Pipe
+    BobonneTranslateV2Pipe,
+    ListArticlesComponent,
+    SystemAddArticleComponent,
+    ArticleComponent
   ],
   imports: [
     BrowserModule,

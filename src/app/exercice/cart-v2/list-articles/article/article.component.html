@@ -1,0 +1,7 @@
+<li>
+    {{qty}} x {{name}} 
+    ajouté le : {{dateAjout | date : "dd/MM/yyyy hh:mm:ss" }}
+     - Traduction pour mamy : {{ qty | bobonneTranslate}}
+<!--* 4 x pomme ajouté le : jj/mm/aaaa hh:mm:ss - Traduction Pour mamy : Quatre-->
+    <button style="color:red;" (click)="delArticle(name)">X</button>
+</li>

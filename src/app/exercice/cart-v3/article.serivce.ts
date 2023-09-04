@@ -1,18 +1,39 @@
 import { Injectable } from "@angular/core";
+import { AuthCartV3Service } from "./auth-cart-v3.service";
 
 @Injectable({
     providedIn: "root"
 })
 export class ArticleService {
 
-    listArticles: any[] = [
-        { name: "Pommes", qty: 1, dateAjout: new Date() },
-        { name: "Poires", qty: 2, dateAjout: new Date() },
-    ]
+    listArticles: any[] = []
+    total : number = 0
+
+    isConnectCartV3 : boolean = false
+
+    constructor(private autCartV3Serve : AuthCartV3Service)
+    {
+        this.isConnectCartV3 = this.autCartV3Serve.isConnectCartV3 ? true : false
+
+        let tmpList = localStorage.getItem("listArticleCartV3")
+        if(tmpList != "" && tmpList != null)
+            this.listArticles = JSON.parse(tmpList)
+
+        this.calculTotalCart()
+    }
 
 
-    addArticle(newArticle: { name: string, qty: number }) {
-        if (newArticle.name != undefined && newArticle.name != '' && newArticle.qty != undefined && newArticle.qty >= 1 && newArticle.qty <= 5) 
+    addArticle(newArticle: { name: string, qty: number })
+    {
+        this.isConnectCartV3 = this.autCartV3Serve.isConnectCartV3 ? true : false
+
+        if (newArticle.name != undefined &&
+             newArticle.name != '' &&
+              newArticle.qty != undefined &&
+               newArticle.qty >= 1 &&
+                newArticle.qty <= 5 && 
+                this.isConnectCartV3
+        ) 
         {
 
             newArticle.name = newArticle.name.trim().toLowerCase()
@@ -42,18 +63,42 @@ export class ArticleService {
             if (okAjout) this.listArticles.push(newArticleToAdd)
 
 
+            this.calculTotalCart()
+            localStorage.setItem("listArticleCartV3", JSON.stringify(this.listArticles))
         }
         
         return this.listArticles
     }
 
-    delArticle(name: string) {
+    delArticle(name: string)
+    {
         this.listArticles = this.listArticles.filter((art) => {
             if (art.name == name) return false
 
             return true
         })
 
+        this.calculTotalCart()
+        localStorage.setItem("listArticleCartV3", JSON.stringify(this.listArticles))
+
         return this.listArticles
+    }
+
+
+    removeAllArt()
+    {
+        localStorage.removeItem("listArticleCartV3")
+        this.listArticles = []
+        this.calculTotalCart()
+    }
+
+
+    calculTotalCart()
+    {
+        this.total = 0
+
+        this.listArticles.forEach((item) => {
+            this.total += item.qty
+        })
     }
 }

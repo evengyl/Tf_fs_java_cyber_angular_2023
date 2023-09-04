@@ -1,5 +1,11 @@
 <h1>Le panier de courses V3 (DI service et storage)</h1>
 
+<p>
+    <button *ngIf="!isConnectCartV3" (click)="loginCartV3()">Login</button>
+    <button *ngIf="isConnectCartV3" (click)="logoutCartV3()">Logout</button>
+</p>
+
+
 <fieldset style="width:35%; float:left;">
     <legend>Système d'ajout</legend>
 
@@ -13,7 +19,8 @@
             newArt != '' &&
             newQty != undefined &&
             newQty >= 1 &&
-            newQty <= 5"
+            newQty <= 5 &&
+            isConnectCartV3"
     >
         Ajouter
     </button>
@@ -22,7 +29,7 @@
 
 
 <fieldset style="width:55%; float:left;">
-    <legend>Liste des courses</legend>
+    <legend>Liste des courses | <button (click)="removeAllArt()">Vider tout</button></legend>
     <ul>
         <li *ngFor="let article of listArticles">
             {{article.qty}} x {{article.name}} 
@@ -31,5 +38,6 @@
 <!--* 4 x pomme ajouté le : jj/mm/aaaa hh:mm:ss - Traduction Pour mamy : Quatre-->
         <button style="color:red;" (click)="delArticle(article.name)">X</button>
         </li>
+        <li><b><i>Total d'article : {{ totalCart }}</i></b></li>
     </ul>
 </fieldset>

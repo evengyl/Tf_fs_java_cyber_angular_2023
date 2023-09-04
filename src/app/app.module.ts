@@ -35,6 +35,7 @@ import { CartV3Component } from './exercice/cart-v3/cart-v3.component';
 import { RefreshPromiseComponent } from './demo/refresh-promise/refresh-promise.component';
 import { GuardsComponent } from './demo/guards/guards.component';
 import { PrivateCompoComponent } from './demo/guards/private-compo/private-compo.component';
+import { TypagesComponent } from './demo/typages/typages.component';
 
 @NgModule({
   declarations: [
@@ -69,7 +70,8 @@ import { PrivateCompoComponent } from './demo/guards/private-compo/private-compo
     CartV3Component,
     RefreshPromiseComponent,
     GuardsComponent,
-    PrivateCompoComponent
+    PrivateCompoComponent,
+    TypagesComponent
   ],
   imports: [
     BrowserModule,

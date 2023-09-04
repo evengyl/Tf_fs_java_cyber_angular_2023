@@ -14,7 +14,7 @@ export class NavComponent implements DoCheck{
   }
 
   ngDoCheck(): void {
-    console.log("Checked")
+    //console.log("Checked")
     //Attention le doCheck demédie a ne pas devoir faire des OBS partout... mais est appele TOUT LE TEMPS POUR TOUT !!!
     //un hover, une directive, un click etc.... donc des centaine de fois par minutes de navigation...
     //a utiliser avec la plus grande prudence et parcimonie

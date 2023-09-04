@@ -20,6 +20,7 @@ import { RefreshPromiseComponent } from './demo/refresh-promise/refresh-promise.
 import { GuardsComponent } from './demo/guards/guards.component';
 import { PrivateCompoComponent } from './demo/guards/private-compo/private-compo.component';
 import { privateAccessChildGuard, privateAccessGuard } from './demo/guards/private-access.guard';
+import { TypagesComponent } from './demo/typages/typages.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -33,7 +34,8 @@ const routes: Routes = [
     { path : "services", component : ServicesComponent},
     { path : "promise", component : RefreshPromiseComponent},
     { path : "guards", component : GuardsComponent},
-    { path : "privateAccess", component : PrivateCompoComponent, canActivate : [privateAccessGuard]}
+    { path : "privateAccess", component : PrivateCompoComponent, canActivate : [privateAccessGuard]},
+    { path : "types", component : TypagesComponent},
   ]},
   {path: 'exercices', canActivateChild : [privateAccessChildGuard], component : ExerciceComponent, children : [
     { path : "chrono", component : ChronoComponent },

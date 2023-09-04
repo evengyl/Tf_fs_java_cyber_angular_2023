@@ -33,6 +33,8 @@ import { ArticleComponent } from './exercice/cart-v2/list-articles/article/artic
 import { ServicesComponent } from './demo/services/services.component';
 import { CartV3Component } from './exercice/cart-v3/cart-v3.component';
 import { RefreshPromiseComponent } from './demo/refresh-promise/refresh-promise.component';
+import { GuardsComponent } from './demo/guards/guards.component';
+import { PrivateCompoComponent } from './demo/guards/private-compo/private-compo.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +67,9 @@ import { RefreshPromiseComponent } from './demo/refresh-promise/refresh-promise.
     ArticleComponent,
     ServicesComponent,
     CartV3Component,
-    RefreshPromiseComponent
+    RefreshPromiseComponent,
+    GuardsComponent,
+    PrivateCompoComponent
   ],
   imports: [
     BrowserModule,

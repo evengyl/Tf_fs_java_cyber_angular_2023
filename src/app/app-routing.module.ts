@@ -17,6 +17,9 @@ import { ListArticlesComponent } from './exercice/cart-v2/list-articles/list-art
 import { ServicesComponent } from './demo/services/services.component';
 import { CartV3Component } from './exercice/cart-v3/cart-v3.component';
 import { RefreshPromiseComponent } from './demo/refresh-promise/refresh-promise.component';
+import { GuardsComponent } from './demo/guards/guards.component';
+import { PrivateCompoComponent } from './demo/guards/private-compo/private-compo.component';
+import { privateAccessChildGuard, privateAccessGuard } from './demo/guards/private-access.guard';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -28,9 +31,11 @@ const routes: Routes = [
     { path : "directivesCustom", component : DirectivesCustomComponent},
     { path : "inputOutput", component : TopPlayersComponent},
     { path : "services", component : ServicesComponent},
-    { path : "promise", component : RefreshPromiseComponent}
+    { path : "promise", component : RefreshPromiseComponent},
+    { path : "guards", component : GuardsComponent},
+    { path : "privateAccess", component : PrivateCompoComponent, canActivate : [privateAccessGuard]}
   ]},
-  {path: 'exercices', component : ExerciceComponent, children : [
+  {path: 'exercices', canActivateChild : [privateAccessChildGuard], component : ExerciceComponent, children : [
     { path : "chrono", component : ChronoComponent },
     { path : "pipeCustom", component : PipeCustomComponent },
     { path : "cartv1", component : CartV1Component },

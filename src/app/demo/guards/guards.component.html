@@ -1,0 +1,13 @@
+<h1>Les guards</h1>
+
+
+<p>Cette page de connexion permet d'accéder à une page gardée par le router Guards</p>
+
+<p>
+    <button *ngIf="!isConnectGuard" (click)="loginGuard()">Login</button>
+    <button *ngIf="isConnectGuard" (click)="logoutGuard()">Logout</button>
+</p>
+
+<p>
+    <a routerLink="/demos/privateAccess">Access to private page</a>
+</p>

@@ -16,6 +16,7 @@ import { TopPlayersComponent } from './demo/inputOutput/top-players/top-players.
 import { ListArticlesComponent } from './exercice/cart-v2/list-articles/list-articles.component';
 import { ServicesComponent } from './demo/services/services.component';
 import { CartV3Component } from './exercice/cart-v3/cart-v3.component';
+import { RefreshPromiseComponent } from './demo/refresh-promise/refresh-promise.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -26,7 +27,8 @@ const routes: Routes = [
     { path : "directivesPart2", component : DirectivesPart2Component},
     { path : "directivesCustom", component : DirectivesCustomComponent},
     { path : "inputOutput", component : TopPlayersComponent},
-    { path : "services", component : ServicesComponent}
+    { path : "services", component : ServicesComponent},
+    { path : "promise", component : RefreshPromiseComponent}
   ]},
   {path: 'exercices', component : ExerciceComponent, children : [
     { path : "chrono", component : ChronoComponent },

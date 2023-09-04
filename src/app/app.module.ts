@@ -32,6 +32,7 @@ import { SystemAddArticleComponent } from './exercice/cart-v2/system-add-article
 import { ArticleComponent } from './exercice/cart-v2/list-articles/article/article.component';
 import { ServicesComponent } from './demo/services/services.component';
 import { CartV3Component } from './exercice/cart-v3/cart-v3.component';
+import { RefreshPromiseComponent } from './demo/refresh-promise/refresh-promise.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import { CartV3Component } from './exercice/cart-v3/cart-v3.component';
     SystemAddArticleComponent,
     ArticleComponent,
     ServicesComponent,
-    CartV3Component
+    CartV3Component,
+    RefreshPromiseComponent
   ],
   imports: [
     BrowserModule,

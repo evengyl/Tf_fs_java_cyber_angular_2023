@@ -1,0 +1,110 @@
+<h1>Les formulaires</h1>
+
+<!-- <h2>La version en TWB [(ngModel)]</h2><br>
+
+<label>Nom</label><input type="text" placeholder="Votre nom" [(ngModel)]="name"><br><br>
+
+<label>Email</label><input type="email" placeholder="Votre Email" [(ngModel)]="email"><br><br>
+
+<label>Password</label><input type="password" placeholder="Mot de passe" [(ngModel)]="password"><br><br>
+
+<label>Gender</label>
+<select [(ngModel)]="gender">
+    <option value="male">Homme</option>
+    <option value="female">Femme</option>
+    <option value="other">Autre</option>
+</select>
+
+<br><br>
+
+<button 
+    *ngIf="name && email && password && gender"
+    (click)="sendTWB()"
+>
+    Envoyer
+</button>
+ -->
+
+
+<h2>Les reactive forms</h2><br>
+
+<form [formGroup]="myForm">
+    <label class="alert-info">Nom</label>
+    <input formControlName="name" type="text" placeholder="Votre nom">
+    <ng-container *ngIf="myForm.controls['name'].errors && myForm.controls['name'].touched">
+        <p *ngIf="myForm.controls['name'].errors['required']" class="alert-danger">Est requis</p>
+        <p *ngIf="myForm.controls['name'].errors['minlength']" class="alert-danger">
+            Dois être supérieur à {{myForm.controls['name'].errors['minlength'].requiredLength}} caractères
+           , actuellement {{myForm.controls['name'].errors['minlength'].actualLength}} caractères
+        </p>
+        <p *ngIf="myForm.controls['name'].errors['maxlength']" class="alert-danger">Est requis</p>
+    </ng-container>
+    
+    <br><br>
+
+    <label class="alert-info">Email</label>
+    <input formControlName="email" type="email" placeholder="Votre Email"><br><br>
+    <ng-container *ngIf="myForm.controls['email'].errors && myForm.controls['email'].touched">
+        <p *ngIf="myForm.controls['email'].errors['email']" class="alert-danger">{{myForm.controls['email'].errors['email']}}</p>
+    </ng-container>
+
+
+
+
+    <label class="alert-info">Password</label>
+    <input formControlName="password" type="password" placeholder="Mot de passe"><br><br>
+
+    <label class="alert-info">Password Confirm</label>
+    <input formControlName="passwordConfirm" type="password" placeholder="Confirmé votre Mot de passe"><br><br>
+
+    <ng-container *ngIf="myForm.errors && myForm.controls['password'].touched">
+        <p *ngIf="myForm.errors['passwordVerify']" class="alert-danger">{{myForm.errors['passwordVerify']}}</p>
+    </ng-container>
+
+
+    <label class="alert-info">Gender</label>
+    <select formControlName="gender">
+        <option value="male">Homme</option>
+        <option value="female">Femme</option>
+        <option value="other">Autre</option>
+    </select>
+
+    <br><br>
+
+    <button
+        (click)="sendRF()"
+        *ngIf="myForm.valid"
+    >
+        Envoyer
+    </button>
+</form>
+
+<br><br>
+
+Form Controls (abstractControl)<br><br>
+<span *ngIf="myForm.pristine" class="alert-warning">(pristine)</span>&nbsp;&nbsp;
+<span *ngIf="myForm.touched" class="alert-warning">(touched)</span>&nbsp;&nbsp;
+<span *ngIf="myForm.invalid" class="alert-danger">(invalid)</span>&nbsp;&nbsp;
+<span *ngIf="myForm.valid" class="alert-success">(valid)</span>
+
+<br><br>
+
+Form control individual (control)<br><br>
+<span *ngIf='myForm.controls["name"].valid' class="alert-success">Name : (valid)</span>&nbsp;&nbsp;
+<span *ngIf='myForm.controls["email"].valid' class="alert-success">Email : (valid)</span>&nbsp;&nbsp;
+<span *ngIf='myForm.controls["password"].valid' class="alert-success">Password : (valid)</span>&nbsp;&nbsp;
+<span *ngIf='myForm.controls["gender"].valid' class="alert-success">Gender (valid)</span>
+
+
+<br><br>
+
+
+Form control individual (error)<br><br>
+<span *ngIf='myForm.controls["name"].errors' class="alert-danger">Name : (invalid)</span>&nbsp;&nbsp;
+<span *ngIf='myForm.controls["email"].errors' class="alert-danger">Email : (invalid)</span>&nbsp;&nbsp;
+<span *ngIf='myForm.controls["password"].errors' class="alert-danger">Password : (invalid)</span>&nbsp;&nbsp;
+<span *ngIf='myForm.controls["gender"].errors' class="alert-danger">Gender (invalid)</span>
+
+
+<br><br>
+<button (click)="seeMyForm()">Voir le console log du formulaire</button>

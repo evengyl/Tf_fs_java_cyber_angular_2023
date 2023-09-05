@@ -7,7 +7,7 @@ import { DemoComponent } from './demo/demo.component';
 import { ExerciceComponent } from './exercice/exercice.component';
 import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { PipesComponent } from './demo/pipes/pipes.component';
 import { BindingsComponent } from './demo/bindings/bindings.component';
 import { TvaPipe } from './demo/pipes/tva.pipe';
@@ -36,6 +36,7 @@ import { RefreshPromiseComponent } from './demo/refresh-promise/refresh-promise.
 import { GuardsComponent } from './demo/guards/guards.component';
 import { PrivateCompoComponent } from './demo/guards/private-compo/private-compo.component';
 import { TypagesComponent } from './demo/typages/typages.component';
+import { ReactiveFormsComponent } from './demo/reactive-forms/reactive-forms.component';
 
 @NgModule({
   declarations: [
@@ -71,12 +72,14 @@ import { TypagesComponent } from './demo/typages/typages.component';
     RefreshPromiseComponent,
     GuardsComponent,
     PrivateCompoComponent,
-    TypagesComponent
+    TypagesComponent,
+    ReactiveFormsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

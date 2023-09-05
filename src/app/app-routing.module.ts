@@ -21,6 +21,7 @@ import { GuardsComponent } from './demo/guards/guards.component';
 import { PrivateCompoComponent } from './demo/guards/private-compo/private-compo.component';
 import { privateAccessChildGuard, privateAccessGuard } from './demo/guards/private-access.guard';
 import { TypagesComponent } from './demo/typages/typages.component';
+import { ReactiveFormsComponent } from './demo/reactive-forms/reactive-forms.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -36,6 +37,7 @@ const routes: Routes = [
     { path : "guards", component : GuardsComponent},
     { path : "privateAccess", component : PrivateCompoComponent, canActivate : [privateAccessGuard]},
     { path : "types", component : TypagesComponent},
+    { path : "reactiveForms", component : ReactiveFormsComponent},
   ]},
   {path: 'exercices', canActivateChild : [privateAccessChildGuard], component : ExerciceComponent, children : [
     { path : "chrono", component : ChronoComponent },

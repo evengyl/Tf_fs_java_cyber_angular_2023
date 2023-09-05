@@ -1,0 +1,35 @@
+.alert-success{
+    padding:10px;
+    background-color: rgb(123, 233, 123);
+    color: green;
+    margin: 10px;
+
+    border:1px solid green;
+}
+
+
+.alert-danger{
+    padding:10px;
+    margin: 10px;
+    background-color: rgb(224, 162, 162);
+    color: red;
+    border:1px solid red;
+}
+
+
+.alert-warning{
+    padding:10px;
+    margin: 10px;
+    background-color: rgb(224, 190, 162);
+    color: orangered(255, 145, 0);
+    border:1px solid orangered;
+}
+
+
+.alert-info{
+    padding:10px;
+    margin: 10px;
+    background-color: rgb(166, 162, 224);
+    color: rgb(13, 0, 255);
+    border:1px solid rgb(13, 0, 255);
+}

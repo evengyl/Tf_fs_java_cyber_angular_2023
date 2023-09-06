@@ -1,0 +1,11 @@
+<h1>Liste des pokemons</h1>
+
+<ul>
+    <li *ngFor="let pokemon of datasPokemons.results">
+        {{ pokemon.name }}
+        <button (click)="getImg(pokemon.url)">Afficher son image</button>
+    </li>
+    <img src="{{imgCurrentPoke}}">
+    <button (click)="next20()">20 Suivants</button>
+    <button (click)="previous20()">20 Précédents</button>
+</ul>

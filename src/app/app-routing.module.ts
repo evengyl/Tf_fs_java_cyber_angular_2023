@@ -22,6 +22,9 @@ import { PrivateCompoComponent } from './demo/guards/private-compo/private-compo
 import { privateAccessChildGuard, privateAccessGuard } from './demo/guards/private-access.guard';
 import { TypagesComponent } from './demo/typages/typages.component';
 import { ReactiveFormsComponent } from './demo/reactive-forms/reactive-forms.component';
+import { ObsComponent } from './demo/obs/obs.component';
+import { StateCompoComponent } from './demo/state-compo/state-compo.component';
+import { HttpClientComponent } from './demo/http-client/http-client.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -38,6 +41,9 @@ const routes: Routes = [
     { path : "privateAccess", component : PrivateCompoComponent, canActivate : [privateAccessGuard]},
     { path : "types", component : TypagesComponent},
     { path : "reactiveForms", component : ReactiveFormsComponent},
+    { path : "obs", component : ObsComponent},
+    { path : "stateCompo", component : StateCompoComponent},
+    { path : "httpclient", component : HttpClientComponent},
   ]},
   {path: 'exercices', canActivateChild : [privateAccessChildGuard], component : ExerciceComponent, children : [
     { path : "chrono", component : ChronoComponent },

@@ -37,6 +37,11 @@ import { GuardsComponent } from './demo/guards/guards.component';
 import { PrivateCompoComponent } from './demo/guards/private-compo/private-compo.component';
 import { TypagesComponent } from './demo/typages/typages.component';
 import { ReactiveFormsComponent } from './demo/reactive-forms/reactive-forms.component';
+import { ObsComponent } from './demo/obs/obs.component';
+import { CompoForObsDemoComponent } from './compo-for-obs-demo/compo-for-obs-demo.component';
+import { StateCompoComponent } from './demo/state-compo/state-compo.component';
+import { HttpClientComponent } from './demo/http-client/http-client.component';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -73,13 +78,18 @@ import { ReactiveFormsComponent } from './demo/reactive-forms/reactive-forms.com
     GuardsComponent,
     PrivateCompoComponent,
     TypagesComponent,
-    ReactiveFormsComponent
+    ReactiveFormsComponent,
+    ObsComponent,
+    CompoForObsDemoComponent,
+    StateCompoComponent,
+    HttpClientComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,14 @@
+<h1>Demo observables</h1>
+
+
+<br>
+<p>Intro avec le of()</p>
+{{ simpleObsNumber }}
+<br>
+
+<p>Behavior subject, le roi des observable</p>
+{{ messageBehaviorObs }}
+<br>
+<input [(ngModel)]="newMessage">
+<button (click)="changeValueBehavior()">Change Obs behavior message()</button>
+
